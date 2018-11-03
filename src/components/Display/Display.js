@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactAnimatedWeather from 'react-animated-weather';
+import './Display.css';
 
 
 const Display = ({conditions}) => {
@@ -9,11 +10,11 @@ const Display = ({conditions}) => {
     <div className="display"> 
        <ReactAnimatedWeather
         icon={conditions.icon}
-        color={'black'}
-        size={100}
+        color={'#61dafb'}
+        size={300}
         animate={true}
       />
-      <h3>{conditions.temperature}</h3>
+      <h3>{conditions.temperature}&#8457;</h3>
       <h4>{conditions.summary}</h4>
     </div>
 

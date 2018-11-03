@@ -1,0 +1,8 @@
+.display {
+  background-color: #fff;
+  opacity: 0.3;
+  width: 55%;
+  height: 500px;
+  margin: 0 auto;
+  border-radius: 10px;
+}
