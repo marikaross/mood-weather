@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import Display from '../Display/Display.js';
 import Search from '../Search/Search.js';
-import apiKey from '../../apiKey.js'; 
+import apiKey from '../../apiKey.js';
+import PropTypes from 'prop-types'; 
 import './App.css';
 
 class App extends Component {
@@ -66,6 +67,15 @@ class App extends Component {
       </div>
     );
   }
+}
+
+App.PropTypes = {
+  getWeather: propTypes.func.isRequired,
+  setConditions: propTypes.func.isRequired,
+  snakeCase: propTypes.func.isRequired,
+  setLocation: propTypes.func.isRequired,
+  location: propTypes.object,
+  condition: propTypes.object
 }
 
 export default App;
