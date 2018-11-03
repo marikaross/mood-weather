@@ -12,7 +12,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-
+    this.getWeather()
   }
 
   setLocation = (coordinates) => {
@@ -20,9 +20,9 @@ class App extends Component {
   }
 
   getWeather = async () => {
-    const allInfo = await fetch(`https://api.darksky.net/forecast/${apiKey}/${this.state.location.userLat},${this.state.location.userLong}`)
+    const allInfo = await fetch(`https://api.darksky.net/forecast/${apiKey}/40.016457,-105.285884`)
     const response = await allInfo.json()
-
+    const cleanData = await console.log(response)
   }
 
   render() {
