@@ -21,11 +21,16 @@ class App extends Component {
     this.setState({location: coordinates})
   }
 
+  snakeCase = (str) => {
+    const caps = str.toUpperCase()
+    const snake = caps.replace(/-/g, '_')
+    return snake
+  }
+
   setConditions = (response) => {
-    console.log(response)
     this.setState({conditions: {
       temperature: response.currently.temperature,
-      icon: response.currently.icon,
+      icon: this.snakeCase(response.currently.icon),
       summary: response.currently.summary
       }
     })
@@ -47,9 +52,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <h1 className="title">Find Your Weather</h1>
         <Search setLocation={this.setLocation}/>
         <Display conditions={this.state.conditions}/>
-        <header className="App-header">
           <a
             className="App-link"
             href="https://darksky.net/poweredby/"
@@ -58,7 +63,6 @@ class App extends Component {
           >
             Powered by Dark Sky
           </a>
-        </header>
       </div>
     );
   }
