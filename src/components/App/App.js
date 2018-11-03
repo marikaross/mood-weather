@@ -52,6 +52,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <h1 className="title">Find Your Weather</h1>
         <Search setLocation={this.setLocation}/>
         <Display conditions={this.state.conditions}/>
         <header className="App-header">
