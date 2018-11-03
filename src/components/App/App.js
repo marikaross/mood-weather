@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import Search from '../Search/Search.js';
+import apiKey from '../../apiKey.js'; 
 import './App.css';
 
 class App extends Component {
   constructor() {
     super()
     this.state = {
-
+      location: {}
     }
   }
 
@@ -14,11 +15,15 @@ class App extends Component {
 
   }
 
-  setLocation() {
-
+  setLocation = (coordinates) => {
+    this.setState({location: coordinates})
   }
 
-  getWeather
+  getWeather = async () => {
+    const allInfo = await fetch('')
+    const response = await allInfo.json()
+
+  }
 
   render() {
     return (
