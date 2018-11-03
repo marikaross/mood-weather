@@ -1,25 +1,34 @@
 import React, { Component } from 'react';
 import Search from '../Search/Search.js';
+import apiKey from '../../apiKey.js'; 
 import './App.css';
 
 class App extends Component {
   constructor() {
     super()
     this.state = {
-
+      location: {}
     }
   }
 
   componentDidMount() {
-
+    this.getWeather()
   }
 
-  getWeather
+  setLocation = (coordinates) => {
+    this.setState({location: coordinates})
+  }
+
+  getWeather = async () => {
+    const allInfo = await fetch(`https://api.darksky.net/forecast/${apiKey}/40.016457,-105.285884`)
+    const response = await allInfo.json()
+    const cleanData = await console.log(response)
+  }
 
   render() {
     return (
       <div className="App">
-        <Search />
+        <Search setLocation={this.setLocation}/>
         <header className="App-header">
           <a
             className="App-link"
