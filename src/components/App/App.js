@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Display from '../Display/Display.js';
 import Search from '../Search/Search.js';
 import apiKey from '../../apiKey.js'; 
 import './App.css';
@@ -20,12 +21,17 @@ class App extends Component {
     this.setState({location: coordinates})
   }
 
-  setConditions = () => {
-
+  setConditions = (response) => {
+    this.setState({conditions: {
+      temperature: response.temperature,
+      icon: response.icon,
+      summary: response.summary
+      }
+    })
   }
 
   getWeather = async () => {
-    const url = `https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/${apiKey}/40.016457,-105.285884?exclude=minutely,hourly,alerts,flags`
+    const url = `https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/${apiKey}/40.016457,-105.285884?exclude=minutely,hourly,daily,alerts,flags`
     const allInfo = await fetch(url, 
       {method: 'GET',
        headers: {
@@ -34,13 +40,14 @@ class App extends Component {
         },
       })
     const response = await allInfo.json()
-    const cleanData = await console.log(response)
+    const currentCondit = await this.setConditions(response)
   }
 
   render() {
     return (
       <div className="App">
         <Search setLocation={this.setLocation}/>
+        <Display conditions={this.state.conditions}/>
         <header className="App-header">
           <a
             className="App-link"
