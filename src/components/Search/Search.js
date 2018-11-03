@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
 export default class Search extends Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     this.state = {
       userLat: '',
       userLong: ''
@@ -16,7 +16,12 @@ export default class Search extends Component {
     })
   }
 
-  
+  manageSubmit = () => {
+    this.props.setLocation(this.state)
+    this.setState({
+      [name]: ''
+    })
+  }
 
 
   render() {
