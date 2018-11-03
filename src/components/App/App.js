@@ -7,7 +7,8 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      location: {}
+      location: {},
+      conditions: {}
     }
   }
 
@@ -19,8 +20,19 @@ class App extends Component {
     this.setState({location: coordinates})
   }
 
+  setConditions = () => {
+
+  }
+
   getWeather = async () => {
-    const allInfo = await fetch(`https://api.darksky.net/forecast/${apiKey}/40.016457,-105.285884`)
+    const url = `https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/${apiKey}/40.016457,-105.285884?exclude=minutely,hourly,alerts,flags`
+    const allInfo = await fetch(url, 
+      {method: 'GET',
+       headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': 'http://localhost:3000'
+        },
+      })
     const response = await allInfo.json()
     const cleanData = await console.log(response)
   }
