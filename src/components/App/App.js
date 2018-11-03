@@ -69,13 +69,13 @@ class App extends Component {
   }
 }
 
-App.PropTypes = {
-  getWeather: propTypes.func.isRequired,
-  setConditions: propTypes.func.isRequired,
-  snakeCase: propTypes.func.isRequired,
-  setLocation: propTypes.func.isRequired,
-  location: propTypes.object,
-  condition: propTypes.object
+App.propTypes = {
+  getWeather: PropTypes.func,
+  setConditions: PropTypes.func,
+  snakeCase: PropTypes.func,
+  setLocation: PropTypes.func,
+  location: PropTypes.object,
+  condition: PropTypes.object
 }
 
 export default App;
