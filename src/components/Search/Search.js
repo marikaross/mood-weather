@@ -18,15 +18,17 @@ export default class Search extends Component {
   render() {
     return (
       <div className="search">
-        <h1 className="title">Weatherly</h1>
+        <h1 className="title">Find Your Weather</h1>
         <input 
           type="text" 
+          name="userLat"
           placeholder="Enter Latitude" 
           value={this.state.userLat}
           onChange={this.getInput}
          />
           <input 
           type="text" 
+          name="userLong"
           placeholder="Enter Longitude" 
           value={this.state.userLong}
           onChange={this.getInput}
