@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactAnimatedWeather from 'react-animated-weather';
+import PropTypes from 'prop-types';
 import './Display.css';
 
 
@@ -19,5 +20,10 @@ const Display = ({conditions}) => {
 
     )
 }
+
+
+Display.propTypes = {
+  conditions: PropTypes.object.isRequired
+};
 
 export default Display;
