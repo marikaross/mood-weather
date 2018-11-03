@@ -55,7 +55,6 @@ class App extends Component {
         <h1 className="title">Find Your Weather</h1>
         <Search setLocation={this.setLocation}/>
         <Display conditions={this.state.conditions}/>
-        <header className="App-header">
           <a
             className="App-link"
             href="https://darksky.net/poweredby/"
@@ -64,7 +63,6 @@ class App extends Component {
           >
             Powered by Dark Sky
           </a>
-        </header>
       </div>
     );
   }
