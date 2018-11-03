@@ -29,7 +29,6 @@ export default class Search extends Component {
   render() {
     return (
       <form className="search" onSubmit={this.manageSubmit}>
-        <h1 className="title">Find Your Weather</h1>
         <input 
           type="text" 
           name="userLat"
