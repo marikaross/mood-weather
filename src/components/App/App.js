@@ -21,11 +21,16 @@ class App extends Component {
     this.setState({location: coordinates})
   }
 
+  snakeCase = (str) => {
+    const caps = str.toUpperCase()
+    const snake = caps.replace(/-/g, '_')
+    return snake
+  }
+
   setConditions = (response) => {
-    console.log(response)
     this.setState({conditions: {
       temperature: response.currently.temperature,
-      icon: response.currently.icon,
+      icon: this.snakeCase(response.currently.icon),
       summary: response.currently.summary
       }
     })
