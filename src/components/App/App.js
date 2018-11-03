@@ -22,10 +22,11 @@ class App extends Component {
   }
 
   setConditions = (response) => {
+    console.log(response)
     this.setState({conditions: {
-      temperature: response.temperature,
-      icon: response.icon,
-      summary: response.summary
+      temperature: response.currently.temperature,
+      icon: response.currently.icon,
+      summary: response.currently.summary
       }
     })
   }
