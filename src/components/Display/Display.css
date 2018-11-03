@@ -1,8 +1,11 @@
 .display {
   background-color: #fff;
-  opacity: 0.3;
-  width: 55%;
-  height: 500px;
+  border: none;
+  opacity: 0.8;
+  width: 53%;
+  height: 375px;
   margin: 0 auto;
   border-radius: 10px;
+  padding-top: 5px;
+  box-sizing: border-box;
 }
