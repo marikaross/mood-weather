@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './Search.css';
 
 
-export default class Search extends Component {
+class Search extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -50,3 +51,11 @@ export default class Search extends Component {
       )
   }
 }
+
+Search.PropTypes = {
+  manageChange: propTypes.func.isRequired,
+  manageSubmit: propTypes.func.isRequired,
+  setLocation: propTypes.func.isRequired
+}
+
+export default Search;
