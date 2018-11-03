@@ -20,7 +20,7 @@ class App extends Component {
   }
 
   getWeather = async () => {
-    const allInfo = await fetch('')
+    const allInfo = await fetch(`https://api.darksky.net/forecast/${apiKey}/${this.state.location.userLat},${this.state.location.userLong}`)
     const response = await allInfo.json()
 
   }
