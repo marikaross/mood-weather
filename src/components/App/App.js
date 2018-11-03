@@ -14,12 +14,16 @@ class App extends Component {
 
   }
 
+  setLocation() {
+
+  }
+
   getWeather
 
   render() {
     return (
       <div className="App">
-        <Search />
+        <Search setLocation={this.setLocation}/>
         <header className="App-header">
           <a
             className="App-link"
