@@ -16,10 +16,13 @@ export default class Search extends Component {
     })
   }
 
-  manageSubmit = () => {
+  manageSubmit = (event) => {
+    event.preventDefault()
+    console.log(this.state)
     this.props.setLocation(this.state)
     this.setState({
-      [name]: ''
+      userLat: '',
+      userLong: ''
     })
   }
 
@@ -42,12 +45,7 @@ export default class Search extends Component {
           value={this.state.userLong}
           onChange={this.manageChange}
          />
-        <button onClick={(event) => {
-          event.preventDefault()
-          this.props.fetchWeather(this.state.userInput)
-        }}
-
-        >Submit</button> 
+        <button>Submit</button> 
       </form>
       )
   }
