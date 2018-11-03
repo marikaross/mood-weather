@@ -18,7 +18,6 @@ export default class Search extends Component {
 
   manageSubmit = (event) => {
     event.preventDefault()
-    console.log(this.state)
     this.props.setLocation(this.state)
     this.setState({
       userLat: '',
