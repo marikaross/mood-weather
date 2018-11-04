@@ -1,0 +1,181 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Display should match the snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Display
+    conditions={
+      Object {
+        "icon": "FOG",
+        "summary": "Best day ever",
+        "temperature": 1000,
+      }
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <ReactAnimatedWeather
+          animate={true}
+          color="#61dafb"
+          icon="FOG"
+          size={275}
+        />,
+        <h3>
+          1000
+          ℉
+        </h3>,
+        <h4>
+          Best day ever
+        </h4>,
+      ],
+      "className": "display",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "animate": true,
+          "color": "#61dafb",
+          "icon": "FOG",
+          "size": 275,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            1000,
+            "℉",
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          1000,
+          "℉",
+        ],
+        "type": "h3",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Best day ever",
+        },
+        "ref": null,
+        "rendered": "Best day ever",
+        "type": "h4",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <ReactAnimatedWeather
+            animate={true}
+            color="#61dafb"
+            icon="FOG"
+            size={275}
+          />,
+          <h3>
+            1000
+            ℉
+          </h3>,
+          <h4>
+            Best day ever
+          </h4>,
+        ],
+        "className": "display",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "animate": true,
+            "color": "#61dafb",
+            "icon": "FOG",
+            "size": 275,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              1000,
+              "℉",
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            1000,
+            "℉",
+          ],
+          "type": "h3",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Best day ever",
+          },
+          "ref": null,
+          "rendered": "Best day ever",
+          "type": "h4",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
