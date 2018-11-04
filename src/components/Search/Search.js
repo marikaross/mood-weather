@@ -52,10 +52,11 @@ class Search extends Component {
   }
 }
 
-Search.PropTypes = {
-  manageChange: propTypes.func.isRequired,
-  manageSubmit: propTypes.func.isRequired,
-  setLocation: propTypes.func.isRequired
-}
 
 export default Search;
+
+Search.propTypes = {
+  manageChange: PropTypes.func,
+  manageSubmit: PropTypes.func,
+  setLocation: PropTypes.func.isRequired
+}

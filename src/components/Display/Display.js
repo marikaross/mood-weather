@@ -38,7 +38,7 @@ ReactAnimatedWeather.propTypes = {
     'SNOW',
     'WIND',
     'FOG'
-  ]).isRequired,
+  ]),
   animate: PropTypes.bool,
   size: PropTypes.number,
   color: PropTypes.string
