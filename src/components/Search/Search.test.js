@@ -17,7 +17,7 @@ describe('Search', () => {
 
     wrapper = shallow(<Search 
       manageChange={mockManageChange}
-      mockManageSubmit={mockManageSubmit}
+      manageSubmit={mockManageSubmit}
       setLocation={mockSetLocation}
       state={mockState}
       />);
