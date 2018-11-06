@@ -15,11 +15,23 @@ class App extends Component {
   }
 
   componentDidMount() {
-    this.getWeather()
+    const location = localStorage.getItem('location')
+    const translate = JSON.parse(location)
+    if (location) {
+      this.setState({location: {...translate}})
+      this.getWeather(translate)
+    }
   }
 
   setLocation = (coordinates) => {
     this.setState({location: coordinates})
+    this.checkLocation()
+  }
+
+  checkLocation = () => {
+    if (this.state.location) {
+      this.getWeather(this.state.location)
+    }
   }
 
   snakeCase = (str) => {
@@ -37,9 +49,9 @@ class App extends Component {
     })
   }
 
-  getWeather = async () => {
-    const url = `https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/${apiKey}/19.228825
-,72.854118?exclude=minutely,hourly,daily,alerts,flags`
+  getWeather = async (locationInfo) => {
+    const url = `https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/${apiKey}/${locationInfo.userLat}
+,${locationInfo.userLong}?exclude=minutely,hourly,daily,alerts,flags`
     const allInfo = await fetch(url, 
       {method: 'GET',
        headers: {
@@ -49,56 +61,87 @@ class App extends Component {
       })
     const response = await allInfo.json()
     const currentCondit = await this.setConditions(response)
-    console.log(this.state.conditions.temperature)
+  }
+
+  setLocalStorage(input) {
+    input = JSON.stringify(input)
+    localStorage.setItem('location', input)
+  }
+
+  welcome() {
+    return (
+       <div className="medium-app">
+        <h1 className="title">Find Your Weather</h1>
+        <div className="search-display">
+          <Search setLocalStorage= {this.setLocalStorage} setLocation={this.setLocation}/>
+            <a
+              className="App-link"
+              href="https://darksky.net/poweredby/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Powered by Dark Sky
+            </a>
+        </div>
+      </div>
+    )
   }
 
   render() {
-    if (this.state.conditions.temperature > 80) {
+    if (!this.state.location) {
+      return this.welcome()
+    } else if (this.state.conditions.temperature > 80) {
     return (
       <div className="hot-app">
         <h1 className="title">Find Your Weather</h1>
-        <Search setLocation={this.setLocation}/>
-        <Display conditions={this.state.conditions}/>
-          <a
-            className="App-link"
-            href="https://darksky.net/poweredby/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Powered by Dark Sky
-          </a>
+        <div className="search-display">
+          <Search setLocalStorage= {this.setLocalStorage} setLocation={this.setLocation}/>
+          <Display conditions={this.state.conditions}/>
+            <a
+              className="App-link"
+              href="https://darksky.net/poweredby/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Powered by Dark Sky
+            </a>
+          </div>
       </div>
       );
     } else if (this.state.conditions.temperature < 32) {
       return (
       <div className="cold-app">
         <h1 className="title">Find Your Weather</h1>
-        <Search setLocation={this.setLocation}/>
-        <Display conditions={this.state.conditions}/>
-          <a
-            className="App-link"
-            href="https://darksky.net/poweredby/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Powered by Dark Sky
-          </a>
+        <div className="search-display">
+          <Search setLocalStorage= {this.setLocalStorage} setLocation={this.setLocation}/>
+          <Display conditions={this.state.conditions}/>
+            <a
+              className="App-link"
+              href="https://darksky.net/poweredby/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Powered by Dark Sky
+            </a>
+          </div>
       </div>
       );
     } else {
       return (
       <div className="medium-app">
         <h1 className="title">Find Your Weather</h1>
-        <Search setLocation={this.setLocation}/>
-        <Display conditions={this.state.conditions}/>
-          <a
-            className="App-link"
-            href="https://darksky.net/poweredby/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Powered by Dark Sky
-          </a>
+        <div className="search-display">
+          <Search setLocalStorage= {this.setLocalStorage} setLocation={this.setLocation}/>
+          <Display conditions={this.state.conditions}/>
+            <a
+              className="App-link"
+              href="https://darksky.net/poweredby/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Powered by Dark Sky
+            </a>
+          </div>
       </div>
       );
     }
