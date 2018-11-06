@@ -6,10 +6,10 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <Search
     manageChange={[MockFunction]}
     manageSubmit={[MockFunction]}
+    setLocalStorage={[MockFunction]}
     setLocation={[MockFunction]}
     state={
       Object {
-        "userLat": "",
         "userLong": "",
       }
     }
