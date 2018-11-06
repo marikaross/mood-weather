@@ -26,6 +26,7 @@ class Search extends Component {
       userLat: '',
       userLong: ''
     })
+    this.props.setLocalStorage(this.state)
   }
 
 
