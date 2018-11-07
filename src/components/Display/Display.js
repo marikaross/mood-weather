@@ -6,7 +6,7 @@ import './Display.css';
 
 const Display = ({conditions}) => {
 
-  return(
+  return (
     <div className="display"> 
       <h3 className="conditions">{conditions.timezone}</h3>
       <ReactAnimatedWeather
@@ -19,8 +19,8 @@ const Display = ({conditions}) => {
       <h4>{conditions.summary}</h4>
     </div>
 
-    )
-}
+  );
+};
 
 
 Display.propTypes = {
