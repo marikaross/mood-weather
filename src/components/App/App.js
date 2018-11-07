@@ -42,6 +42,7 @@ class App extends Component {
 
   setConditions = (response) => {
     this.setState({conditions: {
+      timezone: response.timezone,
       temperature: response.currently.temperature,
       icon: this.snakeCase(response.currently.icon),
       summary: response.currently.summary

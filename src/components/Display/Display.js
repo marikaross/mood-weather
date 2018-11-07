@@ -8,7 +8,8 @@ const Display = ({conditions}) => {
 
   return(
     <div className="display"> 
-       <ReactAnimatedWeather
+      <h3 className="conditions">{conditions.timezone}</h3>
+      <ReactAnimatedWeather
         icon={conditions.icon}
         color={'#61dafb'}
         size={275}

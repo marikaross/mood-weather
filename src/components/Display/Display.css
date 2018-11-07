@@ -3,9 +3,14 @@
   border: none;
   border-radius: 10px;
   box-sizing: border-box;
-  height: 375px;
+  height: 400px;
   margin: 0 auto;
   opacity: 0.8;
   padding-top: 5px;
   width: 100%;
 }
+
+.conditions {
+  margin: 3px;
+}
+
