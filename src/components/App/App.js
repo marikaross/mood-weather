@@ -72,6 +72,9 @@ class App extends Component {
     return (
        <div className="medium-app">
         <h1 className="title">Find Your Weather</h1>
+        <a className="App-link"
+              href="https://www.latlong.net/convert-address-to-lat-long.html"
+              target="_blank">Find Your Lat-Long</a>
         <div className="search-display">
           <Search setLocalStorage= {this.setLocalStorage} setLocation={this.setLocation}/>
             <a
@@ -94,6 +97,9 @@ class App extends Component {
     return (
       <div className="hot-app">
         <h1 className="title">Find Your Weather</h1>
+         <a className="App-link"
+            href="https://www.latlong.net/convert-address-to-lat-long.html"
+            target="_blank">>Find Your Lat-Long</a>
         <div className="search-display">
           <Search setLocalStorage= {this.setLocalStorage} setLocation={this.setLocation}/>
           <Display conditions={this.state.conditions}/>
@@ -112,6 +118,10 @@ class App extends Component {
       return (
       <div className="cold-app">
         <h1 className="title">Find Your Weather</h1>
+         <a className="App-link"
+            href="https://www.latlong.net/convert-address-to-lat-long.html"
+            target="_blank"
+            >Find Your Lat-Long</a>
         <div className="search-display">
           <Search setLocalStorage= {this.setLocalStorage} setLocation={this.setLocation}/>
           <Display conditions={this.state.conditions}/>
@@ -130,6 +140,9 @@ class App extends Component {
       return (
       <div className="medium-app">
         <h1 className="title">Find Your Weather</h1>
+         <a className="App-link"
+            href="https://www.latlong.net/convert-address-to-lat-long.html"
+            target="_blank">Find Your Lat-Long</a>
         <div className="search-display">
           <Search setLocalStorage= {this.setLocalStorage} setLocation={this.setLocation}/>
           <Display conditions={this.state.conditions}/>
