@@ -5,8 +5,8 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <App
     getWeather={[MockFunction]}
+    setConditions={[MockFunction]}
     setLocation={[MockFunction]}
-    setconditions={[MockFunction]}
     snakeCase={[MockFunction]}
   />,
   Symbol(enzyme.__renderer__): Object {
@@ -28,20 +28,32 @@ ShallowWrapper {
         >
           Find Your Weather
         </h1>,
-        <Search
-          setLocation={[Function]}
-        />,
-        <Display
-          conditions={Object {}}
-        />,
         <a
           className="App-link"
-          href="https://darksky.net/poweredby/"
-          rel="noopener noreferrer"
+          href="https://www.latlong.net/convert-address-to-lat-long.html"
           target="_blank"
         >
-          Powered by Dark Sky
+          Find Your Lat-Long
         </a>,
+        <div
+          className="search-display"
+        >
+          <Search
+            setLocalStorage={[Function]}
+            setLocation={[Function]}
+          />
+          <Display
+            conditions={Object {}}
+          />
+          <a
+            className="App-link"
+            href="https://darksky.net/poweredby/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Powered by Dark Sky
+          </a>
+        </div>,
       ],
       "className": "medium-app",
     },
@@ -62,39 +74,83 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "class",
+        "nodeType": "host",
         "props": Object {
-          "setLocation": [Function],
+          "children": "Find Your Lat-Long",
+          "className": "App-link",
+          "href": "https://www.latlong.net/convert-address-to-lat-long.html",
+          "target": "_blank",
         },
         "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {
-          "conditions": Object {},
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
+        "rendered": "Find Your Lat-Long",
+        "type": "a",
       },
       Object {
         "instance": null,
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "Powered by Dark Sky",
-          "className": "App-link",
-          "href": "https://darksky.net/poweredby/",
-          "rel": "noopener noreferrer",
-          "target": "_blank",
+          "children": Array [
+            <Search
+              setLocalStorage={[Function]}
+              setLocation={[Function]}
+            />,
+            <Display
+              conditions={Object {}}
+            />,
+            <a
+              className="App-link"
+              href="https://darksky.net/poweredby/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Powered by Dark Sky
+            </a>,
+          ],
+          "className": "search-display",
         },
         "ref": null,
-        "rendered": "Powered by Dark Sky",
-        "type": "a",
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "setLocalStorage": [Function],
+              "setLocation": [Function],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "conditions": Object {},
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Powered by Dark Sky",
+              "className": "App-link",
+              "href": "https://darksky.net/poweredby/",
+              "rel": "noopener noreferrer",
+              "target": "_blank",
+            },
+            "ref": null,
+            "rendered": "Powered by Dark Sky",
+            "type": "a",
+          },
+        ],
+        "type": "div",
       },
     ],
     "type": "div",
@@ -111,20 +167,32 @@ ShallowWrapper {
           >
             Find Your Weather
           </h1>,
-          <Search
-            setLocation={[Function]}
-          />,
-          <Display
-            conditions={Object {}}
-          />,
           <a
             className="App-link"
-            href="https://darksky.net/poweredby/"
-            rel="noopener noreferrer"
+            href="https://www.latlong.net/convert-address-to-lat-long.html"
             target="_blank"
           >
-            Powered by Dark Sky
+            Find Your Lat-Long
           </a>,
+          <div
+            className="search-display"
+          >
+            <Search
+              setLocalStorage={[Function]}
+              setLocation={[Function]}
+            />
+            <Display
+              conditions={Object {}}
+            />
+            <a
+              className="App-link"
+              href="https://darksky.net/poweredby/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Powered by Dark Sky
+            </a>
+          </div>,
         ],
         "className": "medium-app",
       },
@@ -145,39 +213,83 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "class",
+          "nodeType": "host",
           "props": Object {
-            "setLocation": [Function],
+            "children": "Find Your Lat-Long",
+            "className": "App-link",
+            "href": "https://www.latlong.net/convert-address-to-lat-long.html",
+            "target": "_blank",
           },
           "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "conditions": Object {},
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
+          "rendered": "Find Your Lat-Long",
+          "type": "a",
         },
         Object {
           "instance": null,
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "Powered by Dark Sky",
-            "className": "App-link",
-            "href": "https://darksky.net/poweredby/",
-            "rel": "noopener noreferrer",
-            "target": "_blank",
+            "children": Array [
+              <Search
+                setLocalStorage={[Function]}
+                setLocation={[Function]}
+              />,
+              <Display
+                conditions={Object {}}
+              />,
+              <a
+                className="App-link"
+                href="https://darksky.net/poweredby/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Powered by Dark Sky
+              </a>,
+            ],
+            "className": "search-display",
           },
           "ref": null,
-          "rendered": "Powered by Dark Sky",
-          "type": "a",
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "setLocalStorage": [Function],
+                "setLocation": [Function],
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "conditions": Object {},
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Powered by Dark Sky",
+                "className": "App-link",
+                "href": "https://darksky.net/poweredby/",
+                "rel": "noopener noreferrer",
+                "target": "_blank",
+              },
+              "ref": null,
+              "rendered": "Powered by Dark Sky",
+              "type": "a",
+            },
+          ],
+          "type": "div",
         },
       ],
       "type": "div",
