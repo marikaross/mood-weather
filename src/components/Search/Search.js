@@ -5,28 +5,28 @@ import './Search.css';
 
 class Search extends Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       userLat: '',
       userLong: ''
-    }
+    };
   }
 
   manageChange = (event) => {
-    let {name, value} = event.target
+    let {name, value} = event.target;
     this.setState({
       [name]: value
-    })
+    });
   }
 
   manageSubmit = (event) => {
-    event.preventDefault()
-    this.props.setLocation(this.state)
+    event.preventDefault();
+    this.props.setLocation(this.state);
     this.setState({
       userLat: '',
       userLong: ''
-    })
-    this.props.setLocalStorage(this.state)
+    });
+    this.props.setLocalStorage(this.state);
   }
 
 
@@ -39,17 +39,17 @@ class Search extends Component {
           placeholder="Enter Latitude" 
           value={this.state.userLat}
           onChange={this.manageChange}
-         />
-          <input 
+        />
+        <input 
           type="text" 
           name="userLong"
           placeholder="Enter Longitude" 
           value={this.state.userLong}
           onChange={this.manageChange}
-         />
+        />
         <button>Submit</button> 
       </form>
-      )
+    );
   }
 }
 
@@ -59,5 +59,6 @@ export default Search;
 Search.propTypes = {
   manageChange: PropTypes.func,
   manageSubmit: PropTypes.func,
-  setLocation: PropTypes.func.isRequired
-}
+  setLocation: PropTypes.func.isRequired,
+  setLocalStorage: PropTypes.func.isRequired
+};
