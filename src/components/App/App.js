@@ -61,7 +61,7 @@ class App extends Component {
         }
       });
     const response = await allInfo.json();
-    const currentCondit = await this.setConditions(response);
+    return await this.setConditions(response);
   }
 
   setLocalStorage(input) {
