@@ -5,8 +5,8 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <App
     getWeather={[MockFunction]}
+    setConditions={[MockFunction]}
     setLocation={[MockFunction]}
-    setconditions={[MockFunction]}
     snakeCase={[MockFunction]}
   />,
   Symbol(enzyme.__renderer__): Object {
@@ -28,6 +28,13 @@ ShallowWrapper {
         >
           Find Your Weather
         </h1>,
+        <a
+          className="App-link"
+          href="https://www.latlong.net/convert-address-to-lat-long.html"
+          target="_blank"
+        >
+          Find Your Lat-Long
+        </a>,
         <div
           className="search-display"
         >
@@ -63,6 +70,20 @@ ShallowWrapper {
         "ref": null,
         "rendered": "Find Your Weather",
         "type": "h1",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Find Your Lat-Long",
+          "className": "App-link",
+          "href": "https://www.latlong.net/convert-address-to-lat-long.html",
+          "target": "_blank",
+        },
+        "ref": null,
+        "rendered": "Find Your Lat-Long",
+        "type": "a",
       },
       Object {
         "instance": null,
@@ -146,6 +167,13 @@ ShallowWrapper {
           >
             Find Your Weather
           </h1>,
+          <a
+            className="App-link"
+            href="https://www.latlong.net/convert-address-to-lat-long.html"
+            target="_blank"
+          >
+            Find Your Lat-Long
+          </a>,
           <div
             className="search-display"
           >
@@ -181,6 +209,20 @@ ShallowWrapper {
           "ref": null,
           "rendered": "Find Your Weather",
           "type": "h1",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Find Your Lat-Long",
+            "className": "App-link",
+            "href": "https://www.latlong.net/convert-address-to-lat-long.html",
+            "target": "_blank",
+          },
+          "ref": null,
+          "rendered": "Find Your Lat-Long",
+          "type": "a",
         },
         Object {
           "instance": null,
