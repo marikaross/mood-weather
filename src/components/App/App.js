@@ -93,7 +93,7 @@ class App extends Component {
   }
 
   render() {
-    if (!this.state.location) {
+    if (this.state.location === '') {
       return this.welcome();
     } else if (this.state.conditions.temperature > 80) {
       return (
