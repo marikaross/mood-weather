@@ -16,8 +16,10 @@ An application, powered by the [Dark Sky API](https://darksky.net/dev) that info
 
 
 ## Screenshots
-### Splash Page:
-<img src="https://github.com/marikaross/nurish-FE/blob/master/public/images/splashPage.png">
+### Temperature Sensitive Page:
+<img src="https://github.com/marikaross/mood-weather/blob/master/public/screen%20shots/cold.png">
+<img src="https://github.com/marikaross/mood-weather/blob/master/public/screen%20shots/nice.png">
+<img src="https://github.com/marikaross/mood-weather/blob/master/public/screen%20shots/hot.png">
 
 
 ## Set Up
