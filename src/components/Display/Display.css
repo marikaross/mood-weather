@@ -1,11 +1,16 @@
 .display {
   background-color: #fff;
   border: none;
-  opacity: 0.8;
-  width: 100%;
-  height: 375px;
-  margin: 0 auto;
   border-radius: 10px;
-  padding-top: 5px;
   box-sizing: border-box;
+  height: 400px;
+  margin: 0 auto;
+  opacity: 0.8;
+  padding-top: 5px;
+  width: 100%;
 }
+
+.conditions {
+  margin: 3px;
+}
+
