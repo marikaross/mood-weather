@@ -26,6 +26,9 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
+        <h3
+          className="conditions"
+        />,
         <ReactAnimatedWeather
           animate={true}
           color="#61dafb"
@@ -44,6 +47,18 @@ ShallowWrapper {
     },
     "ref": null,
     "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": undefined,
+          "className": "conditions",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "h3",
+      },
       Object {
         "instance": null,
         "key": undefined,
@@ -96,6 +111,9 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
+          <h3
+            className="conditions"
+          />,
           <ReactAnimatedWeather
             animate={true}
             color="#61dafb"
@@ -114,6 +132,18 @@ ShallowWrapper {
       },
       "ref": null,
       "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": undefined,
+            "className": "conditions",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "h3",
+        },
         Object {
           "instance": null,
           "key": undefined,

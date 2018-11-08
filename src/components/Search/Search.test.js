@@ -50,8 +50,9 @@ describe('Search', () => {
     const mockEvent = { preventDefault: jest.fn() }
     const mockState = {userLat: '36.974117', userLong: '-122.030792'}
     wrapper.setState(mockState)
+    const checkIt = wrapper.find('form').simulate('submit')
 
-    wrapper.instance().manageSubmit(mockEvent)
+    // wrapper.instance().manageSubmit(mockEvent)
     expect(mockManageSubmit).toBeCalledWith(mockState);
   })
 

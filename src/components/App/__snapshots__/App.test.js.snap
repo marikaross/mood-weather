@@ -31,6 +31,7 @@ ShallowWrapper {
         <a
           className="App-link"
           href="https://www.latlong.net/convert-address-to-lat-long.html"
+          rel="noopener noreferrer"
           target="_blank"
         >
           Find Your Lat-Long
@@ -79,6 +80,7 @@ ShallowWrapper {
           "children": "Find Your Lat-Long",
           "className": "App-link",
           "href": "https://www.latlong.net/convert-address-to-lat-long.html",
+          "rel": "noopener noreferrer",
           "target": "_blank",
         },
         "ref": null,
@@ -170,6 +172,7 @@ ShallowWrapper {
           <a
             className="App-link"
             href="https://www.latlong.net/convert-address-to-lat-long.html"
+            rel="noopener noreferrer"
             target="_blank"
           >
             Find Your Lat-Long
@@ -218,6 +221,7 @@ ShallowWrapper {
             "children": "Find Your Lat-Long",
             "className": "App-link",
             "href": "https://www.latlong.net/convert-address-to-lat-long.html",
+            "rel": "noopener noreferrer",
             "target": "_blank",
           },
           "ref": null,

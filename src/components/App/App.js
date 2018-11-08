@@ -10,11 +10,13 @@ class App extends Component {
     super();
     this.state = {
       location: {},
-      conditions: {}
+      conditions: {},
+      hasLocation: false
     };
   }
 
   componentDidMount() {
+    this.hasLocation()
     const location = localStorage.getItem('location');
     const translate = JSON.parse(location);
     if (location) {
@@ -22,6 +24,10 @@ class App extends Component {
       this.getWeather(translate);
     }
   }
+
+  hasLocation = () => {
+    localStorage.location ? this.setState({hasLocation: true}) : this.setState({hasLocation: false})
+  } 
 
   setLocation = (coordinates) => {
     this.setState({location: coordinates});
@@ -93,7 +99,7 @@ class App extends Component {
   }
 
   render() {
-    if (this.state.location === '') {
+    if (!this.state.hasLocation) {
       return this.welcome();
     } else if (this.state.conditions.temperature > 80) {
       return (
